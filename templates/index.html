@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+
+{% for i, j in data.items %}
+    <h1>{{ i }}={{ j }}</h1>
+{% endfor %}
+
+<form action="{% url 'index' token %}" method="post">
+    {% csrf_token %}
+    <button type="submit">Click Me</button>
+</form>
+</body>
+</html>
